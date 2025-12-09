@@ -1,0 +1,8 @@
+@import "tailwindcss";
+body{
+  background: #e3e7e5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #b1bcc2, #d6eadf);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #cce7f9, #d2dbd6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
