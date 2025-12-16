@@ -35,7 +35,7 @@ const Hero = () => {
         solving DSA problems, and designing user-friendly interfaces.
       </p>
       {/* download-resume */}
-      <a href="../public/resume.pdf" download className="mt-5 w-40 h-10 rounded  bg-white font-bold h-8 text-[#155DFC] flex justify-center items-center">
+      <a href="/resume.pdf" download className="mt-5 w-40 h-10 rounded  bg-white font-bold h-8 text-[#155DFC] flex justify-center items-center">
         Download Resume
       </a>
 
