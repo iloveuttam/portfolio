@@ -34,7 +34,10 @@ const Hero = () => {
         React, Node.js, Express and MongoDB. I love writing clean code,
         solving DSA problems, and designing user-friendly interfaces.
       </p>
-      <button className="mt-5 w-30 h-10 rounded  bg-white font-bold h-8 text-[#155DFC]">Resume</button>
+      {/* download-resume */}
+      <a href="../public/resume.pdf" download className="mt-5 w-40 h-10 rounded  bg-white font-bold h-8 text-[#155DFC] flex justify-center items-center">
+        Download Resume
+      </a>
 
      
       

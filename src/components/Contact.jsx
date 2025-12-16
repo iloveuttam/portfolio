@@ -53,12 +53,11 @@ const Contact = () => {
           </div>
 
           {/* Submit */}
-          <button
-            type="submit"
-            className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow hover:shadow-xl hover:scale-105 transition"
-          >
-            Send Message
-          </button>
+          
+           <a href="mailto:uttamkr069@gmail.com"    className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow hover:shadow-xl hover:scale-105 transition">
+               Send message
+            </a>
+
         </form>
 
         {/* Social Links */}

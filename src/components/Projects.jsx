@@ -70,7 +70,7 @@ const Projects = () => {
               Live Demo
             </a>
             <a
-              href="#"
+              href="https://github.com/iloveuttam/portfolio"
               target="_blank"
               className="px-4 py-2 border border-blue-600 text-blue-600 text-sm rounded-lg font-medium hover:bg-blue-50 transition"
             >
@@ -87,7 +87,7 @@ const Projects = () => {
             className="rounded-lg w-full h-48 object-cover mb-5"
           />
           <h3 className="text-xl font-semibold text-gray-900 mb-3">
-            Todo List MERN App
+            Notes Saver
           </h3>
           <p className="text-gray-600 text-sm leading-relaxed mb-5">
             CRUD-based productivity application featuring authentication,
@@ -95,14 +95,14 @@ const Projects = () => {
           </p>
           <div className="flex gap-3">
             <a
-              href="#"
+              href="https://note-saver-tan.vercel.app/"
               target="_blank"
               className="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg font-medium shadow hover:scale-105 transition"
             >
               Live Demo
             </a>
             <a
-              href="#"
+              href="https://github.com/iloveuttam/NoteSaver"
               target="_blank"
               className="px-4 py-2 border border-blue-600 text-blue-600 text-sm rounded-lg font-medium hover:bg-blue-50 transition"
             >
