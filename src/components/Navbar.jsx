@@ -15,7 +15,6 @@ const Navbar = () => {
     { id: "contact", label: "Contact" },
   ];
 
-  // Change navbar background on scroll + detect active section
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -25,77 +24,88 @@ const Navbar = () => {
         if (!el) return;
 
         const top = el.getBoundingClientRect().top;
-        if (top <= 100 && top >= -el.offsetHeight + 100) {
+        if (top <= 120 && top >= -el.offsetHeight + 120) {
           setActive(item.id);
         }
       });
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all ${
-        scrolled ? "bg-white shadow-md" : "bg-white/60 backdrop-blur"
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-[#0f172a]/90 backdrop-blur border-b border-gray-700 shadow-lg"
+          : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
+      <div className="max-w-6xl mx-auto flex justify-between items-center px-4 py-4">
         {/* Logo */}
         <Link
           to="hero"
-          smooth={true}
+          smooth
           duration={500}
           offset={-70}
-          className="text-2xl font-bold cursor-pointer"
+          className="text-2xl font-bold cursor-pointer text-white tracking-wide"
         >
-          Portfolio
+          Uttam<span className="text-blue-400">.</span>
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-8">
           {navItems.map((item) => (
             <Link
               key={item.id}
               to={item.id}
-              smooth={true}
+              smooth
               duration={500}
               offset={-70}
-              className={`cursor-pointer transition ${
-                active === item.id ? "text-blue-600" : "text-gray-600 hover:text-blue-500"
+              className={`cursor-pointer font-medium transition relative ${
+                active === item.id
+                  ? "text-blue-400"
+                  : "text-gray-300 hover:text-blue-400"
               }`}
             >
               {item.label}
+              {active === item.id && (
+                <span className="absolute -bottom-2 left-0 w-full h-[2px] bg-blue-400 rounded"></span>
+              )}
             </Link>
           ))}
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        <button
+          className="md:hidden text-gray-200"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-inner px-4 py-3 space-y-2">
+        <div className="md:hidden bg-[#0f172a] border-t border-gray-700 px-6 py-4 space-y-3">
           {navItems.map((item) => (
             <Link
               key={item.id}
               to={item.id}
-              smooth={true}
+              smooth
               duration={500}
               offset={-70}
-              className={`block py-2 cursor-pointer rounded ${
-                active === item.id ? "text-blue-600 font-semibold" : "text-gray-600"
+              className={`block py-2 rounded text-lg transition ${
+                active === item.id
+                  ? "text-blue-400 font-semibold"
+                  : "text-gray-300 hover:text-blue-400"
               }`}
               onClick={() => setIsOpen(false)}
             >
               {item.label}
             </Link>
-            
           ))}
-          <div className="w-5 h-1 bg-green-500"> heelo</div>
         </div>
       )}
     </nav>
@@ -103,5 +113,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
 
 
